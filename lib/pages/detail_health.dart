@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:tuban_health/data/models/service.dart';
 
 class DetailHealth extends StatefulWidget {
@@ -54,7 +56,7 @@ class _DetailHealthState extends State<DetailHealth> {
         itemBuilder: (context, index) {
           final item = layanan[index];
           return Container(
-            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             height: 140,
             margin: const EdgeInsets.only(bottom: 20),
             child: Material(
@@ -74,47 +76,41 @@ class _DetailHealthState extends State<DetailHealth> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  Flexible(
-                    child: Container(
-                      margin: const EdgeInsets.symmetric(vertical: 10),
-                      padding: const EdgeInsets.only(right: 8),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            item.name,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16),
-                          ),
-                          Text(
-                            item.address,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 14),
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                "${item.rating}",
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                              Row(
-                                children: stars(item.rating),
-                              )
-                            ],
-                          ),
-                          Expanded(
-                            child: Text(
-                              item.open,
-                              style: const TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                              overflow: TextOverflow.ellipsis,
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item.name,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                        Text(
+                          item.address,
+                          style: const TextStyle(
+                              color: Colors.black, fontSize: 14),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "${item.rating}",
+                              style: const TextStyle(fontSize: 12),
                             ),
+                            Row(
+                              children: stars(item.rating),
+                            )
+                          ],
+                        ),
+                        Text(
+                          item.open,
+                          style: const TextStyle(
+                            color: Colors.green,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   )
                 ],
