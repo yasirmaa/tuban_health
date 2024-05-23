@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tuban_health/data/models/marker_map.dart';
 import 'package:tuban_health/data/repositories/marker_map_repository.dart';
-import 'package:tuban_health/pages/add_edit_saved.dart';
+import 'package:tuban_health/pages/saved/add_edit_saved.dart';
 import 'package:tuban_health/theme/styles.dart';
 import 'package:tuban_health/widgets/card_detail_saved.dart';
 

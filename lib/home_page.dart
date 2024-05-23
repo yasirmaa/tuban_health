@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tuban_health/pages/health_service_page.dart';
-import 'package:tuban_health/pages/map_page.dart';
-import 'package:tuban_health/pages/saved_page.dart';
+import 'package:tuban_health/pages/facility/health_service_page.dart';
+import 'package:tuban_health/pages/map/map_page.dart';
+import 'package:tuban_health/pages/saved/saved_page.dart';
 import 'package:tuban_health/theme/styles.dart';
 
 class HomePage extends StatefulWidget {

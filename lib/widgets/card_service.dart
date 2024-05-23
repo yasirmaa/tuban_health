@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../pages/detail_health.dart';
+import '../pages/facility/detail_health.dart';
 
 class CardService extends StatelessWidget {
   final String title;
